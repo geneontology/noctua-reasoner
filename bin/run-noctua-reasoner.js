@@ -4,7 +4,7 @@ var fs = require('fs'),
     path = require('path'),
     getopt = require('node-getopt');
 
-og = require('../test/ro.json')
+og = require('../tests/ro.json')
 var Reasoner = require('..').Reasoner;
 
 var opt = getopt.create([
@@ -19,7 +19,7 @@ var opt = getopt.create([
 
 console.log(Reasoner)
 var r = new Reasoner(og)
-subjs = ['http://purl.obolibrary.org/obo//BFO_0000003']
-objs = ['http://purl.obolibrary.org/obo//BFO_0000003']
-rs= r.getValidRelations(subjs,objs)
+subjs = ['http://purl.obolibrary.org/obo/BFO_0000003']
+objs = ['http://purl.obolibrary.org/obo/BFO_0000003']
+rs= r.testRelations(subjs,objs)
 console.log(rs)
