@@ -1,0 +1,151 @@
+{
+  "graphs" : [ {
+    "nodes" : [ {
+      "id" : "f1",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "Female",
+      "type" : "CLASS"
+    }, {
+      "id" : "Male",
+      "type" : "CLASS"
+    }, {
+      "id" : "m1",
+      "type" : "INDIVIDUAL"
+    }, {
+      "id" : "b",
+      "type" : "INDIVIDUAL"
+    } ],
+    "edges" : [ {
+      "sub" : "parent-of",
+      "pred" : "subPropertyOf",
+      "obj" : "ancestor-of"
+    }, {
+      "sub" : "f1",
+      "pred" : "type",
+      "obj" : "Male"
+    }, {
+      "sub" : "Male",
+      "pred" : "is_a",
+      "obj" : "Person"
+    }, {
+      "sub" : "Female",
+      "pred" : "is_a",
+      "obj" : "Person"
+    }, {
+      "sub" : "father-of",
+      "pred" : "subPropertyOf",
+      "obj" : "parent-of"
+    }, {
+      "sub" : "m1",
+      "pred" : "mother-of",
+      "obj" : "b"
+    }, {
+      "sub" : "grandfather-of",
+      "pred" : "subPropertyOf",
+      "obj" : "grandparent-of"
+    }, {
+      "sub" : "sister-of",
+      "pred" : "subPropertyOf",
+      "obj" : "sibling-of"
+    }, {
+      "sub" : "brother-of",
+      "pred" : "subPropertyOf",
+      "obj" : "sibling-of"
+    }, {
+      "sub" : "ancestor-of",
+      "pred" : "subPropertyOf",
+      "obj" : "genealogically-related-to"
+    }, {
+      "sub" : "b",
+      "pred" : "father-of",
+      "obj" : "b2"
+    }, {
+      "sub" : "child-of",
+      "pred" : "inverseOf",
+      "obj" : "parent-of"
+    }, {
+      "sub" : "child-of",
+      "pred" : "subPropertyOf",
+      "obj" : "descendant-of"
+    }, {
+      "sub" : "f1",
+      "pred" : "father-of",
+      "obj" : "b"
+    }, {
+      "sub" : "mother-of",
+      "pred" : "subPropertyOf",
+      "obj" : "parent-of"
+    }, {
+      "sub" : "ancestor-of",
+      "pred" : "inverseOf",
+      "obj" : "descendant-of"
+    }, {
+      "sub" : "grandmother-of",
+      "pred" : "subPropertyOf",
+      "obj" : "grandparent-of"
+    }, {
+      "sub" : "descendant-of",
+      "pred" : "subPropertyOf",
+      "obj" : "genealogically-related-to"
+    }, {
+      "sub" : "grandparent-of",
+      "pred" : "subPropertyOf",
+      "obj" : "ancestor-of"
+    }, {
+      "sub" : "f1",
+      "pred" : "father-of",
+      "obj" : "c"
+    }, {
+      "sub" : "m1",
+      "pred" : "mother-of",
+      "obj" : "c"
+    }, {
+      "sub" : "sibling-of",
+      "pred" : "subPropertyOf",
+      "obj" : "genealogically-related-to"
+    }, {
+      "sub" : "m1",
+      "pred" : "type",
+      "obj" : "Female"
+    }, {
+      "sub" : "b",
+      "pred" : "father-of",
+      "obj" : "b1"
+    } ],
+    "id" : "http://purl.obolibrary.org/obo/T",
+    "meta" : {
+      "subsets" : [ ],
+      "xrefs" : [ ],
+      "basicPropertyValues" : [ ]
+    },
+    "equivalentNodesSets" : [ ],
+    "logicalDefinitionAxioms" : [ ],
+    "domainRangeAxioms" : [ {
+      "predicateId" : "mother-of",
+      "domainClassIds" : [ "Female" ]
+    }, {
+      "predicateId" : "brother-of",
+      "domainClassIds" : [ "Male" ]
+    }, {
+      "predicateId" : "father-of",
+      "domainClassIds" : [ "Male" ]
+    }, {
+      "predicateId" : "sister-of",
+      "domainClassIds" : [ "Female" ]
+    } ],
+    "propertyChainAxioms" : [ {
+      "predicateId" : "sibling-of",
+      "chainPredicateIds" : [ "child-of", "parent-of" ]
+    }, {
+      "predicateId" : "grandmother-of",
+      "chainPredicateIds" : [ "mother-of", "parent-of" ]
+    }, {
+      "predicateId" : "grandfather-of",
+      "chainPredicateIds" : [ "parent-of", "parent-of" ]
+    }, {
+      "predicateId" : "grandparent-of",
+      "chainPredicateIds" : [ "parent-of", "parent-of" ]
+    } ]
+  } ]
+}
